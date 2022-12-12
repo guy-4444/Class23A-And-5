@@ -6,6 +6,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -19,11 +22,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         main_LST_songs = findViewById(R.id.main_LST_songs);
 
 
         ArrayList<Song> songs = DataManager.getSongs();
-        Adapter_Song adapter_song = new Adapter_Song(songs);
+
+        songs.get(10).setFavorite(true);
+        songs.get(8).setFavorite(true);
+
+        Adapter_Song adapter_song = new Adapter_Song(this, songs);
         main_LST_songs.setLayoutManager(new LinearLayoutManager(this));
         main_LST_songs.setAdapter(adapter_song);
     }

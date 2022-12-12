@@ -8,7 +8,7 @@ public class DataManager {
         ArrayList<Song> songs = new ArrayList<>();
 
         songs.add(new Song()
-                .setImage("https://i.ytimg.com/vi/p1JPKLa-Ofc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBRKzzKhwKgercaxsdXRDKM-0JNRA")
+                .setImage("https://i.ytimg.com/vi/p1JPKLa-Ofc/hqdefault.jpg")
                 .setName("Beyoncé - CUFF IT")
                 .setDuration(232)
                 .setLikes(402_000)
@@ -85,6 +85,14 @@ public class DataManager {
                 .setDuration(174)
                 .setLikes(3_840_000)
                 .setViews(1_400_000_000)
+        );
+
+        songs.add(new Song()
+                .setImage("https://i.ytimg.com/vi/tO7CCP7liwI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB5Fb-wth1ZsOlgXu01qZdVWJb7Hg")
+                .setName("Coldplay: Everyday Life Live in Jordan")
+                .setDuration(230)
+                .setLikes(5_840_000)
+                .setViews(17_000_000)
         );
 
         return songs;
